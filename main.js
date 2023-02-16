@@ -179,6 +179,16 @@ select.addEventListener("click", function(){
 
 
 
+
+
+function remove (id){
+    savedd.pop(id)
+    filter(menu, savedd)
+}
+
+
+
+
 const savedd = [];
 
 function add (id){
@@ -195,7 +205,9 @@ function filter(menu, savedd){
                 console.log(menu[i]);
                 saved_copy.innerHTML +=`<img src="${menu[i].img}" alt="img" width="300px" height="200px">
                 <h2>${menu[i].name}</h2>
-                <h4 class="price">$${menu[i].price}</h4>`
+                <button onclick="remove(${menu[i].id})" class="add">remove</button>
+                <h4 class="price">$${menu[i].price}</h4>
+                `
             }
         }
     }
