@@ -123,6 +123,7 @@ search.addEventListener('click', function(){
             <img src=${item.img} alt="img" width="300px" height="200px">
             <h4>${item.name}</h4>
             <h4 class="price">$${item.price}</h4>
+            <button onclick="add(${item.id})" class="add">add</button>
          </div>`
         }
 
